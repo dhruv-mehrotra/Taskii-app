@@ -109,11 +109,6 @@ class SignUpPage extends StatelessWidget {
                 },
                 child: Text("Sign In Post clicking Signup"),
               ),
-              new SizedBox(
-                width: 180.0,
-                height: 45,
-                child: new Text('Please reopen app after clicking on signin for the first time :)', textAlign: TextAlign.center,),
-              ),
             ],
           ),
         );

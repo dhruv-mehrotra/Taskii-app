@@ -35,22 +35,6 @@ class TodoListWidget extends StatelessWidget {
           return TodoFunctionalityWidget(todo: todo);
         },
       );
-    //     : new StaggeredGridView.count(
-    //   crossAxisCount: 4,
-    //   // I only need two card horizontally
-    //   padding: const EdgeInsets.all(2.0),
-    //   children: snapshot.data.map<Widget>((item) {
-    //     //Do you need to go somewhere when you tap on this card, wrap using InkWell and add your route
-    //     return new TodoFunctionalityWidget(todo);
-    //   }).toList(),
-    //
-    //   //Here is the place that we are getting flexible/ dynamic card for various images
-    //   staggeredTiles: snapshot.data
-    //       .map<StaggeredTile>((_) => StaggeredTile.fit(2))
-    //       .toList(),
-    //   mainAxisSpacing: 3.0,
-    //   crossAxisSpacing: 4.0, // add some space
-    // )
 
   }
 }

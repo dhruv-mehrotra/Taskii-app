@@ -15,6 +15,20 @@ class EditTodoPage extends StatefulWidget {
 }
 
 class _EditTodoPageState extends State<EditTodoPage> {
+  void saveTodo() {
+    final isValid = _formKey.currentState.validate();
+
+    if (!isValid) {
+      return;
+    } else {
+      final provider = Provider.of<TodosProvider>(context, listen: false);
+
+      provider.updateTodo(widget.todo, title);
+
+      Navigator.of(context).pop();
+    }
+  }
+
   final _formKey = GlobalKey<FormState>();
 
   String title;
@@ -25,6 +39,8 @@ class _EditTodoPageState extends State<EditTodoPage> {
 
     title = widget.todo.title;
   }
+
+
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -56,17 +72,4 @@ class _EditTodoPageState extends State<EditTodoPage> {
     ),
   );
 
-  void saveTodo() {
-    final isValid = _formKey.currentState.validate();
-
-    if (!isValid) {
-      return;
-    } else {
-      final provider = Provider.of<TodosProvider>(context, listen: false);
-
-      provider.updateTodo(widget.todo, title);
-
-      Navigator.of(context).pop();
-    }
-  }
 }

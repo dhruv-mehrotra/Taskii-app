@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:taskii/signin_page.dart';
 
+import 'main.dart';
 import 'widgets/authentication_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -21,17 +22,16 @@ class SignUpPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               new SizedBox(
-                width: double.infinity,
+                width: 150,
                 height: 20,
-                child: new Text('Hey Newbie,'
-                    'Welcome to Taskii!', textAlign: TextAlign.center,),
+                child: new Text('Hey Newbie, Welcome', textAlign: TextAlign.center,),
               ),
               new SizedBox(
-                width: double.infinity,
-                height: 150.0,
+                width: 90.0,
+                height: 90.0,
                 child: new Image.asset("assets/taskii_logo.png",
-                    height: 100.00,
-                    width: 130.00
+                    height: 80.00,
+                    width: 80.00
                 ),),
               TextField(
                 style: TextStyle(color: Colors.teal),
@@ -104,16 +104,15 @@ class SignUpPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SignInPage()),
+                    MaterialPageRoute(builder: (context) => MyApp()),
                   );
                 },
-                child: Text("Sign In Post Signup"),
+                child: Text("Sign In Post clicking Signup"),
               ),
               new SizedBox(
-                width: double.infinity,
-                height: 40,
-                child: new Text('Please reopen app after clicking on signin for the first time :)'
-                    'Issue shall be resolved soon', textAlign: TextAlign.center,),
+                width: 180.0,
+                height: 45,
+                child: new Text('Please reopen app after clicking on signin for the first time :)', textAlign: TextAlign.center,),
               ),
             ],
           ),

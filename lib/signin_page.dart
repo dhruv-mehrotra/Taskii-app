@@ -11,13 +11,7 @@ class SignInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primaryColor: Colors.pink,
-          scaffoldBackgroundColor: Colors.black,
-        ),
-        home: Scaffold(
+    return Scaffold(
           appBar: AppBar(
             title: const Text('Log into Taskii'),
           ),
@@ -26,10 +20,10 @@ class SignInPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               new SizedBox(
-                width: double.infinity,
-                height: 150.0,
+                width: 100.0,
+                height: 100.0,
                 child: new Image.asset("assets/taskii_logo.png",
-                    height: 130.00, width: 130.00),
+                    height: 90.00, width: 90.00),
               ),
               TextField(
                 style: TextStyle(color: Colors.teal),
@@ -111,6 +105,6 @@ class SignInPage extends StatelessWidget {
               )
             ],
           ),
-        ));
+        );
   }
 }

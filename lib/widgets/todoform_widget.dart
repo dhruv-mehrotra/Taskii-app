@@ -49,10 +49,10 @@ class TodoFormWidget extends StatelessWidget {
   );
 
   Widget buildButton() => SizedBox(
-    width: double.infinity,
+    width: 150,
     child: ElevatedButton(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(Colors.black),
+        backgroundColor: MaterialStateProperty.all(Colors.pink),
       ),
       onPressed: onSavedTodo,
       child: Text('Save'),
